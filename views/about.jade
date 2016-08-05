@@ -1,0 +1,92 @@
+if loggedIn
+ include userlayout
+else
+ include layout
+
+block content
+ .top-margin
+ h1.header-margin About
+ hr
+ #about
+  #profile-photo
+    img(src='../images/sam.jpg' alt='Profile Photo')
+  .bio
+    .bio-top
+      h2 Sam Okasha - Web Dev
+    ul.accordion
+      li
+        .bio-header
+          h2 About Me
+          i.fa.fa-chevron-down
+        p.submenu
+          | I am full-stack web developer with a background in business. I've lived and worked around the world and had the chance to work on exciting projects including developing new brand and store concepts. My love of technology, continuous learning and tinkering has lead me take web development from being a hobby to a passion and career.
+          br
+          br
+          | 						Outside of web development I like to travel, hike and try out different foods.
+      li
+        .bio-header
+          h2 What I Do
+          i.fa.fa-chevron-down
+        p.submenu
+          | I work with HTML, CSS, JavaScript and Node.js for developing web apps. I devote a lot of my time to learning new technologies and am constantly working on side projects. Check out my GitHub 
+          a#git-link(href='https://github.com/samokasha', target='_blank')
+            | profile 
+            i.fa.fa-external-link.fa-1x
+          | to see the latest things I've been working on.
+      li#skills
+        .bio-header
+          h2 My Skillset
+          i.fa.fa-chevron-down
+        ul.submenu
+          li
+            | HTML
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+          li
+            | CSS
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+          li
+            | JavaScript
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+          li
+            | jQuery
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+          li
+            | Node.js
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-half-o
+              i.fa.fa-star-o
+          li
+            | MongoDB
+            .rating
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-half-o
+              i.fa.fa-star-o
+ br
+ br
+ br
+ include footer

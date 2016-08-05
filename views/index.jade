@@ -1,0 +1,191 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js')
+    script(src='/javascripts/script.js')
+    title Sam Okasha - Web Developer
+  body
+    header
+      section#home
+        #main-nav
+          .nav-title
+            h3 S/O
+            a#nav-burger
+              span
+          .navigation
+            ul.nav-ul
+              li
+                a(href='#home') Home
+              li
+                a(href='#portfolio') Portfolio
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contact
+              li
+                a(href='/blog', target="_blank")
+                  | Blog
+                  i.fa.fa-external-link.fa-1x
+    .top.bkg
+    br
+    br
+    section#services
+      h1 Services
+      hr
+      .services
+        .icon.res
+          i.fa.fa-paint-brush.fa-4x
+          .services-desc
+            h2 Elegant Design
+            p
+              | As a fan of elegant, clean and simple design, I aim to deliver an intuitive easy-to-use user interface for your site or web application
+        .icon.res
+          i.fa.fa-code.fa-4x
+          .services-desc
+            h2 Clean Code
+            p
+              | Serving up clean and valid HTML, CSS and JavaScript code to keep your site easily maintainable
+        .icon.seo
+          i.fa.fa-tablet.fa-4x
+          .services-desc
+            h2 Responsive
+            p
+              | All websites are built using a mobile first approach to ensure they look great across mobile phones, tablets and desktops.
+    br
+    br
+    section#portfolio
+      h1 Portfolio
+      hr
+      #projects
+        .photo-container
+          .photo
+            img(src='../images/rspresized.jpg' alt='Project: Rally Sports')
+            .overlay
+              a(href='#')
+               h3 Rally Sports FZCO
+               p Rally Sports is a boutique shop selling high end men's fashion
+               p (Coming Soon)
+        .photo-container
+          .photo.blog
+            img(src='../images/blog3.jpg' alt='Project: Rally Sports')
+            .overlay
+              a(href='https://github.com/samokasha/so-node-blog' target='_blank')
+               h3 SO-Node Blog
+               p SO-Node Blog is a responsive, open source blogging app built with Node.js
+    br
+    br
+    section#about
+      h1 About
+      hr
+      #profile-photo
+        img(src='../images/sam.jpg' alt='Sam Okasha Profile Photo')
+      .bio
+        .bio-top
+          h2 Sam Okasha - Web Dev
+        ul.accordion
+          li
+            .bio-header
+              h2 About Me
+              i.fa.fa-chevron-down
+            p.submenu
+              | I am full-stack web developer with a background in business. I've lived and worked around the world and had the chance to work on exciting projects including developing new brand and store concepts. My love of technology, continuous learning and tinkering has lead me take web development from being a hobby to a passion and career.
+              br
+              br
+              | 						Outside of web development I like to travel, hike and try out different foods.
+          li
+            .bio-header
+              h2 What I Do
+              i.fa.fa-chevron-down
+            p.submenu
+              | I work with HTML, CSS, JavaScript and Node.js for developing web apps. I devote a lot of my time to learning new technologies and am constantly working on side projects. Check out my GitHub 
+              a#git-link(href='https://github.com/samokasha', target='_blank')
+               | profile 
+               i.fa.fa-external-link.fa-1x
+              | to see the latest things I've been working on.
+          li#skills
+            .bio-header
+              h2 My Skillset
+              i.fa.fa-chevron-down
+            ul.submenu
+              li
+                | HTML
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-o
+              li
+                | CSS
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-o
+              li
+                | JavaScript
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-o
+              li
+                | jQuery
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-o
+              li
+                | Node.js
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-o
+              li
+                | MongoDB
+                .rating
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-half-o
+                  i.fa.fa-star-o
+    br
+    br
+    section#contact
+      h1 Contact Me
+      hr
+      != messages()
+      if errors
+       ul.errors
+        each error, i in errors
+         li #{error.msg}
+      form.form(method='POST', action='/sendmsg')
+        .form-container
+          input(type='text', name='name', placeholder='Name')
+          input(type='email', name='email', placeholder='jdoe@mail.com')
+          textarea(name='message')
+          input(type='submit', name='submit', value='Send')
+    br
+    br
+    section#footer
+      .footer.social-media
+        .social-icons
+          a.fa.fa-facebook-square.fa-2x(href='')
+          a.fa.fa-twitter.fa-2x(href='https://twitter.com/sam_okasha', target='_blank')
+          a.fa.fa-codepen.fa-2x(href='http://codepen.io/Sam_Okasha/', target='_blank')
+          a.fa.fa-linkedin-square.fa-2x(href='https://www.linkedin.com/in/osameh-okasha-4741a625', target='_blank')
+          a.fa.fa-github.fa-2x(href='https://github.com/samokasha', target='_blank')
+      .footer.copy
+        p Copyright &copy;2016 Sam Okasha

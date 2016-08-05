@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .top-margin
+  ul.errors
+   if errors
+    each error, i in errors
+     li #{error.msg}
+  != messages()
+  h1.header-margin Login
+  hr
+  form#login(method='post', action='/blog/login')
+   input(type="text", name="username", placeholder="Enter Username")
+   input(type="password", name="password", placeholder="Enter Password")
+   input(type="submit", name="submit", value="Login")
+  p#sign-up
+      | Click 
+      a(href='/blog/register') here
+      |  to register for an account
+  hr
+  br
+  h1.header-margin Login Using Social Media
+  p.privacy-policy-text By logging in with your social media account you agree to&nbsp
+   a(href="/blog/register/privacypolicy" target="_blank")
+    | Samsblog's Privacy Policy
+    i.fa.fa-external-link.fa-1x
+   | &nbsp&nbsp&nbsp&nbspand&nbsp
+   a(href="/blog/register/termsofuse" target="_blank")
+    | Terms of Use
+    i.fa.fa-external-link.fa-1x
+  hr
+  a.social-login.facebook(href='/blog/login/auth/facebook')
+   i.fa.fa-facebook
+   p Login with Facebook
+  br
+  a.social-login.google(href='/blog/login/auth/google')
+   i.fa.fa-google
+   p Login with Google
+  br
+  br
+  br
+  include footer
